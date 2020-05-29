@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const pointSchema = new mongoose.Schema({
   timestamp: Number,
@@ -16,11 +16,12 @@ const trackSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User"
-  },name {
+  },
+  name: {
     type: String,
-    default: ''
+    default: ""
   },
   locations: [pointSchema]
 })
 
-mongoose.model('Track', trackSchema)
+mongoose.model("Track", trackSchema)
